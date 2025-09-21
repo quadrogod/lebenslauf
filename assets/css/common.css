@@ -1,4 +1,8 @@
-html, body {min-height: 100vh; background-color: #cccccc; font-family: 'Segoe UI', Tahoma, Geneva, sans-serif;}
+html, body {
+    min-height: 100vh;
+    background-color: #cccccc;
+    font-family: 'Segoe UI', Tahoma, Geneva, sans-serif;
+}
 .a4-container {
     width: 794px;      /* ширина A4 при 96dpi */
     height: 1123px;    /* высота A4 при 96dpi */
