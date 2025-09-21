@@ -8,6 +8,14 @@ html, body {min-height: 100vh; background-color: #cccccc; font-family: 'Segoe UI
     padding: 12px 24px;     /* минимальные отступы, ~4мм */
     font-size: 14px;
 }
+
+@media (max-width: 1024px) {
+    .a4-container {
+        width: 100%;
+        height: auto;
+    }
+}
+
 .bg-main {background-color: #166c60;}
 h1, .h1 {font-size: 28px; font-weight: bold; text-transform: uppercase; margin: 8px 0;}
 h2, .h2 {font-size: 24px; font-weight: bold; text-transform: uppercase; margin: 8px 0;}
