@@ -1,0 +1,232 @@
+<html lang="de">
+    <head>
+        <title>Lebenslauf</title>
+        <meta charset="utf-8">
+        <style>
+            html, body {min-height: 100vh; background-color: #cccccc; font-family: 'Segoe UI', Tahoma, Geneva, sans-serif;}
+            .a4-container {
+                width: 794px;      /* ширина A4 при 96dpi */
+                height: 1123px;    /* высота A4 при 96dpi */
+                margin: 0 auto;    /* центрирование */
+                background: #fff;
+                box-sizing: border-box;
+                padding: 12px 24px;     /* минимальные отступы, ~4мм */
+                font-size: 14px;
+            }
+            .bg-main {background-color: #166c60;}
+            h1, .h1 {font-size: 28px; font-weight: bold; text-transform: uppercase; margin: 8px 0;}
+            h2, .h2 {font-size: 24px; font-weight: bold; text-transform: uppercase; margin: 8px 0;}
+            h3, .h3 {font-size: 20px; font-weight: bold; text-transform: uppercase; margin: 8px 0;}
+            /*.col1 {width: 70%;}*/
+            /*.col2 {width: 30%;}*/
+
+            .icon {width: 16px;}
+
+            .flex-columns {
+                display: flex;
+                gap: 18px; /* зазор между всеми колонками */
+            }
+
+            .flex-columns > .col-70 {
+                flex: 7 1 0; /* 7 частей из 10 */
+            }
+
+            .flex-columns > .col-30 {
+                flex: 3 1 0; /* 3 части из 10 */
+            }
+
+            .w-100 {
+                width: 100%;
+                max-width: 100%;
+            }
+            .block {width: 100%;}
+            .block > .title {
+                background-color: #dce9e7; text-transform: uppercase; width: 100%; margin-bottom: 8px; font-weight: bold;
+                font-size: 20px;
+            }
+            .block > .title > span {background-color: #fff; padding-right: 12px;}
+            .block > .text {}
+
+            .block + .block {
+                margin-top: 18px;
+            }
+
+            ul {
+                padding-left: 15px;
+                margin: 12px 0;
+            }
+
+            ul.none {padding: 0;}
+            ul.none li {list-style: none;}
+            ul.none li + li {margin-top: 8px;}
+            ul.none .icon {margin-right: 12px;}
+
+            ul.icons-list {display: flex; flex-direction: column;}
+            ul.icons-list li {display: flex; flex-direction: row; align-items: center;}
+
+            .bar {
+                height: 6px;
+                background: #eee;
+                border-radius: 0px;
+                overflow: hidden;
+                margin-top: 6px;
+                width: 100%;
+                display: block;
+            }
+
+            .bar > i {
+                display: block;
+                height: 100%;
+                background: linear-gradient(90deg,#166c60,#166c60);
+                width: 0%;
+                border-radius: 0px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="a4-container">
+            <div class="bg-main" style="content: ''; width: 100%; height: 24px; margin-bottom: 18px;">&nbsp;</div>
+            <div class="flex-columns">
+                <div class="col-70">
+                    <h1 class="h1">Alexey Molchanov</h1>
+                    <div class="block">
+                        <div class="text">
+                            Erfahrener Backend- und Fullstack-Entwickler mit über 15 Jahren Berufserfahrung in der Konzeption, Entwicklung und Skalierung komplexer Softwarelösungen. Nachweisliche Erfolge bei der Umsetzung von High-Load-Projekten, Entwicklung von Microservices-Architekturen sowie Integration von Drittanbieter-Systemen.
+                            Unternehmerische Erfahrung als CEO und Projektleiter.
+                        </div>
+                    </div>
+
+                    <div class="block">
+                        <div class="title"><span>Berufserfahrung</span></div>
+                        <div class="text">
+                            <strong>CEO & Leitender Backend-Entwickler, 06/2009&nbsp;&dash;&nbsp;03/2022<br>
+                                Techcon PVL - Pawlodar, Kasachstan
+                            </strong>
+                            <ul>
+                                <li>Aufbau und Leitung eines Entwicklerteams (über 140 Projekte, von Webseiten bis High-Load-Systeme).</li>
+                                <li>Entwicklung und Wartung von CRM-Lösungen, Portalen für Online-Übertragungen, Chat-Systemen und Bots.</li>
+                                <li>Einrichtung automatisierter CI/CD-Prozesse.</li>
+                                <li>Implementierung von Monitoring-, Statistik- und Logging-Systemen.</li>
+                                <li>Integration von Drittanbieterdiensten (VoIP, CRM, Gateways).</li>
+                                <li>Entwicklung von Terminals und Automatisierungslösungen für Reinigungsunternehmen.</li>
+                            </ul>
+                        </div>
+                        <div class="text">
+                            <strong>CEO, 02/2014&nbsp;&dash;&nbsp;09/2017<br>
+                                Light Travel Boutique GmbH - Pawlodar, Kasachstan
+                            </strong>
+                            <ul>
+                                <li>Gründung und Leitung einer Reiseagentur</li>
+                                <li>Implementierung einer selbst entwickelten CRM-Lösung zur Optimierung der Tourenbuchung</li>
+                                <li>Finanz-, Steuer- und Dokumentationsmanagement</li>
+                            </ul>
+                        </div>
+                        <div class="text">
+                            <strong>Verkaufsleiter, 06/2006&nbsp;&dash;&nbsp;03/2009<br>
+                                Logycom GmbH - Pawlodar, Kasachstan
+                            </strong><br>
+                            (führendes IT-Unternehmen in Kasachstan)
+                            <ul>
+                                <li>Beratung und Verkauf von Computerausrüstung</li>
+                                <li>Hardware-Zusammenstellung von PCs</li>
+                                <li>Nutzung und Pflege eines CRM-Systems</li>
+                            </ul>
+                            *Interne Auszeichnung als bester Verkaufsberater
+                        </div>
+                    </div>
+
+                    <div class="block">
+                        <div class="title"><span>Ausbildung</span></div>
+                        <div class="text" style="font-size: 90%">
+                            <strong>Bachelor, Informatik & Softwareentwicklung, 09/2004&nbsp;&dash;&nbsp;06/2008<br>
+                                Staatliche Universität Pawlodar Pawlodar, Kasachstan
+                            </strong>
+                            <br>
+                            <br>
+                            <strong>Mittlere Reife, 09/1993&nbsp;&dash;&nbsp;06/2004<br>
+                                Allgemeinbildende Schule Nr. 4 Pawlodar, Kasachstan
+                            </strong>
+                        </div>
+                    </div>
+
+                    <div class="block">
+                        <div class="title"><span>Projektarbeit</span></div>
+                        <div class="text">
+                            <ul>
+                                <li>
+                                    Lotos Reinigungskette – <a href="https://lotos-team.ru">https://lotos-team.ru</a>
+                                    <br>
+                                    Entwicklung einer skalierbaren Webplattform mit CRM/ERP, Mikrodiensten und IoT
+                                </li>
+                                <li>
+                                    HotelsBook.kz – <a href="https://hotelsbook.kz">https://hotelsbook.kz</a>
+                                    <br>
+                                    Hotelbuchungsplattform nach dem Vorbild von Booking.com mit Microservices und Partnernetzwerk
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-30">
+                    <img class="img w-100" style="margin-bottom: 12px;" src="photo.jpg" alt="photo1">
+
+                    <div class="block">
+                        <div class="text">
+                            <ul class="none icons-list">
+                                <li><img class="icon" src="assets/maps-and-flags.png" alt=""> Breitenbachstr. 1, 54293 Trier</li>
+                                <li><img class="icon" src="assets/telephone.png" alt=""> <a href="tel:+4917620953345">+49&nbsp;176&nbsp;209&nbsp;533&nbsp;45</a></li>
+                                <li><img class="icon" src="assets/paper-plane.png" alt=""> <a href="mailto:alexey.molchanov@web.de">alexey.molchanov@web.de</a></li>
+                                <li><img class="icon" src="assets/cake.png" alt=""> 21.06.1986</li>
+                                <li><img class="icon" src="assets/car.png" alt=""> <strong>B</strong></li>
+                                <li><img src="qr-code.png" alt="qr" style="width: 80px; margin-left: -4px; margin-right: 6px;"> <a href="https://www.linkedin.com/in/quadrogod/">LinkedIn<br>Alexey Molchanov</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="block">
+                        <div class="title"><span>Soft-Skills</span></div>
+                        <div class="text">
+                            <ul>
+                                <li>Anpassungsfähigkeit</li>
+                                <li>Flexibilität</li>
+                                <li>Kommunikationsfähigkeit</li>
+                                <li>Zielstrebigkeit & Proaktivität</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="block">
+                        <div class="title"><span>Sprachen</span></div>
+                        <div class="text">
+                            <ul class="none">
+                                <li title="Muttersprache"><strong>Russish</strong>: Muttersprache</li>
+                                <li title="Fortgeschrittene Sprachverwendung">
+                                    <strong>Deutsch</strong>: B1<br>
+                                    <div class="bar" aria-hidden="true"><i style="width:50%"></i></div>
+                                </li>
+                                <li title="Grundlegende Kenntnisse">
+                                    <strong>Englisch</strong>: A2<br>
+                                    <div class="bar" aria-hidden="true"><i style="width:35%"></i></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="block">
+                        <div class="title"><span>IT-Skills</span></div>
+                        <div class="text">
+                            <ul class="none">
+                                <li><strong>Backend & Architektur</strong>: PHP, Laravel, Node.js</li>
+                                <li><strong>Frontend & Mobile</strong>: Vue.js, Flutter, React-Native, HTML/CSS</li>
+                                <li><strong>Datenbanken & Infrastruktur</strong>: MySQL, MariaDB, Redis, ELK-Stack, Meilisearch, Apache/NGINX</li>
+                                <li><strong>DevOps & Tools</strong>: Docker, Git/GitHub Actions, Jenkins, PHPStorm, Android Studio, Xcode, Linux/MacOS/Windows</li>
+                                <li><strong>Integration</strong>: Payment, CRM, SMS-Gateways, VoIP, Binance API, XMPP, Bot-Entwicklung</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
