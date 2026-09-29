@@ -88,3 +88,6 @@ ul.icons-list li {display: flex; flex-direction: row; align-items: center;}
     width: 0%;
     border-radius: 0px;
 }
+
+a {color: #126057;}
+a:visited {color: #3A6E69;}
