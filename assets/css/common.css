@@ -20,6 +20,27 @@ html, body {
     }
 }
 
+* {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    color-adjust: exact;
+}
+
+@media print {
+    @page {
+        size: A4;
+        margin: 0;
+    }
+    html, body {
+        min-height: 0;
+        background: none;
+    }
+    .a4-container {
+        margin: 0;
+        transform-origin: top left;
+    }
+}
+
 /*.bg-main {background-color: #166c60;}*/
 .bg-main {background-color: #369389;}
 /*.bg-main {background-color: #e75560;}*/
