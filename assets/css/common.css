@@ -20,7 +20,9 @@ html, body {
     }
 }
 
-.bg-main {background-color: #166c60;}
+/*.bg-main {background-color: #166c60;}*/
+.bg-main {background-color: #369389;}
+/*.bg-main {background-color: #e75560;}*/
 h1, .h1 {font-size: 28px; font-weight: bold; text-transform: uppercase; margin: 8px 0;}
 h2, .h2 {font-size: 24px; font-weight: bold; text-transform: uppercase; margin: 8px 0;}
 h3, .h3 {font-size: 20px; font-weight: bold; text-transform: uppercase; margin: 8px 0;}
