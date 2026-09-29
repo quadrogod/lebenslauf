@@ -1,0 +1,45 @@
+<html lang="ru">
+    <head>
+        <title>Кодировщик контактов</title>
+        <meta charset="utf-8">
+        <meta name="robots" content="noindex,nofollow">
+        <style>
+            body { font-family: sans-serif; max-width: 640px; margin: 40px auto; padding: 0 16px; }
+            label { display: block; margin-top: 16px; font-weight: bold; }
+            input { width: 100%; box-sizing: border-box; padding: 8px; margin-top: 4px; }
+            button { margin-top: 16px; padding: 8px 16px; }
+            textarea { width: 100%; box-sizing: border-box; height: 60px; margin-top: 16px; font-family: monospace; }
+            pre { background: #f4f4f4; padding: 12px; overflow-x: auto; }
+        </style>
+    </head>
+    <body>
+        <h1>Кодировщик контактов для index.html</h1>
+        <p>Заполните поля, нажмите «Закодировать» и вставьте результат в <code>index.html</code> вместо существующего <code>data-value</code>.</p>
+
+        <label for="href">Ссылка (href), например <code>tel:+49...</code> или <code>mailto:...</code></label>
+        <input id="href" type="text" placeholder="tel:+4917620953345">
+
+        <label for="text">Отображаемый текст</label>
+        <input id="text" type="text" placeholder="+49 176 209 533 45">
+
+        <button onclick="encode()">Закодировать</button>
+
+        <label for="result">Готовая строка для data-value</label>
+        <textarea id="result" readonly></textarea>
+
+        <label>Пример для вставки в index.html</label>
+        <pre id="snippet"></pre>
+
+        <script>
+            function encode() {
+                var href = document.getElementById('href').value;
+                var text = document.getElementById('text').value;
+                var encoded = btoa(href + '|' + text);
+                document.getElementById('result').value = encoded;
+                document.getElementById('snippet').textContent =
+                    '<span class="reveal" data-value="' + encoded + '">' +
+                    '<a href="#" class="reveal-link" onclick="return revealContact(this)">показать</a></span>';
+            }
+        </script>
+    </body>
+</html>
