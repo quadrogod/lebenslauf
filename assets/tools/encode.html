@@ -9,12 +9,12 @@
             input { width: 100%; box-sizing: border-box; padding: 8px; margin-top: 4px; }
             button { margin-top: 16px; padding: 8px 16px; }
             textarea { width: 100%; box-sizing: border-box; height: 60px; margin-top: 16px; font-family: monospace; }
-            pre { background: #f4f4f4; padding: 12px; overflow-x: auto; }
+            pre { background: #f4f4f4; padding: 12px; overflow-x: auto; white-space: pre-wrap; word-break: break-all; }
         </style>
     </head>
     <body>
         <h1>Кодировщик контактов для index.html</h1>
-        <p>Заполните поля, нажмите «Закодировать» и вставьте результат в <code>index.html</code> вместо существующего <code>data-value</code>.</p>
+        <p>Заполните поля, нажмите «Закодировать» и вставьте результат в <code>index.html</code> вместо существующего <code>&lt;span class="qc-i"&gt;...&lt;/span&gt;</code>.</p>
 
         <label for="href">Ссылка (href), например <code>tel:+49...</code> или <code>mailto:...</code></label>
         <input id="href" type="text" placeholder="tel:+4917620953345">
@@ -22,10 +22,10 @@
         <label for="text">Отображаемый текст</label>
         <input id="text" type="text" placeholder="+49 176 209 533 45">
 
-        <button onclick="encode()">Закодировать</button>
+        <label for="trigger">Текст триггера</label>
+        <input id="trigger" type="text" placeholder="anzeigen" value="anzeigen">
 
-        <label for="result">Готовая строка для data-value</label>
-        <textarea id="result" readonly></textarea>
+        <button onclick="encode()">Закодировать</button>
 
         <label>Пример для вставки в index.html</label>
         <pre id="snippet"></pre>
@@ -34,11 +34,15 @@
             function encode() {
                 var href = document.getElementById('href').value;
                 var text = document.getElementById('text').value;
+                var trigger = document.getElementById('trigger').value;
                 var encoded = btoa(href + '|' + text);
-                document.getElementById('result').value = encoded;
+                var n = encoded.length;
+                var a = encoded.slice(0, Math.floor(n / 3));
+                var b = encoded.slice(Math.floor(n / 3), Math.floor(2 * n / 3));
+                var c = encoded.slice(Math.floor(2 * n / 3));
                 document.getElementById('snippet').textContent =
-                    '<span class="reveal" data-value="' + encoded + '">' +
-                    '<a href="#" class="reveal-link" onclick="return revealContact(this)">показать</a></span>';
+                    '<span class="qc-i" data-a="' + a + '" data-b="' + b + '" data-c="' + c + '">' +
+                    '<a href="#" class="qc-l" onclick="return _qz(this)">' + trigger + '</a></span>';
             }
         </script>
     </body>
